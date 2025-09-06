@@ -36,10 +36,26 @@ Machine Learning Prediction of Potential Inhibitors of the Marburg Virus Gene 4 
 ## Data Availability
 The data used for this project can be [here](https://pubchem.ncbi.nlm.nih.gov/assay/pcget.cgi?query=download&record_type=datatable&actvty=all&response_type=save&aid=540276)
 
+## License
+**License :** MIT
+
+## Citation
+Lamptey E., Anyaele G., Arthur H., Adjadeh T., Sagoe D., Hanson G. and Awe O. I. (2025). Machine Learning Prediction of Potential Inhibitors of the Marburg Virus Gene 4 Small ORF Protein using MARVpred <i>Scientific Reports</i>.
+
+<!--
+Hiba Ben Aribi, Najla Abassi and Olaitan I. Awe. NeuroVar: A Genetic Expression and Variation data visualization tool for Neurological diseases’ biomarkers. Zenodo. https://doi.org/10.5281/zenodo.13375646.  RRID: SCR_025640.
+-->
+
+## Reporting Issues
+To report an issue please use the issues page (https://github.com/omicscodeathon/marburgdrug/issues). Please check existing issues before submitting a new one.
+
+## Contribute to Project
+You can offer to help with the further development of this project by making pull requests on this repo. To do so, fork this repository and make the proposed changes. Once completed and tested, submit a pull request to this repo.
+
 ## Reproducibility
 
 ## Credits
-**The Team members include:**
+**Contributors:**
 
 | N°  | First & Last Name              | Email address                    | ORCID ID                                                       |
 | :--:| :----------------------------- | :------------------------------: | :------------------------------------------------------------: |
