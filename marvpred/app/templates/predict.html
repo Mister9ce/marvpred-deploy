@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Predict - MARVpred{% endblock %}
+
+{% block content %}
+<section class="hero1">
+    <div class="hero-content1">
+        <h1>Predict Compound Inhibition</h1>
+    </div>
+</section >
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.smiles.label }}<br>
+            {{ form.smiles(size=32) }}
+            {% for error in form.smiles.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.model.label }}<br>
+            {{ form.model() }}
+            {% for error in form.model.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+    <h3>Example SMILES:</h3>
+    <ul>
+        <li><code>CCO</code> (Ethanol)</li>
+        <li><code>CC(=O)OC1=CC=CC=C1C(=O)O</code> (Aspirin)</li>
+        <li><code>CN1C=NC2=C1C(=O)N(C(=O)N2C)C</code> (Caffeine)</li>
+    </ul>
+{% endblock %}

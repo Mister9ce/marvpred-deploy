@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% block title %}FAQ - MARVpred{% endblock %}
+
+{% block content %}
+    <style>
+        /* FAQ Specific Styles */
+        .faq-container {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+}
+        }
+
+        .faq-header {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-header h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .faq-header p {
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4a4a4a;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #666;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 2rem 1.5rem 2rem;
+            color: #666;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+    </style>
+
+    <div class="faq-container">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Answers to Common Inquiries About MARVPred</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                What is MARVPred and how does it work?
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                MARVpred is a machine learning-powered tool designed to predict chemical compound inhibition against Marburg virus. It analyzes chemical structures using SMILES notation to identify potential antiviral compounds that could help in the fight against this deadly hemorrhagic fever virus.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                How do I use the prediction tool?
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                Simply navigate to our Predict page and enter the SMILES notation of your chemical compound. Our advanced machine learning model will analyze the structure and provide predictions about its potential inhibitory activity against Marburg virus.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                What is SMILES notation?
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                SMILES (Simplified Molecular Input Line Entry System) is a chemical notation that allows you to represent molecular structures as text strings. For example, water (H₂O) is represented as "O" and ethanol as "CCO". This format enables our AI to understand and analyze chemical structures.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                How accurate are the predictions?
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                Our machine learning model has been trained on extensive datasets of chemical compounds and their antiviral activities. While predictions provide valuable insights for research, they should be validated through experimental studies. The tool is designed to accelerate drug discovery research, not replace laboratory testing.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Can I use this tool for commercial research?
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                MARVpred is developed for research purposes to advance the fight against Marburg virus. For commercial applications or large-scale research projects, please contact our team to discuss licensing and collaboration opportunities.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Who developed MARVpred?
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                MARVpred was developed by a team of researchers and developers under the supervision of Dr. Olaitan Awe. The development team includes Gabriel Anyaele, Eugene Lamptey. Visit our Contact page for more information about the team.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+{% endblock %}

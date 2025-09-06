@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% block title %}Contact - MARVpred{% endblock %}
+
+{% block content %}
+    <style>
+        /* Contact Specific Styles */
+        .hero1 {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        
+        .hero-content1 h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .contact-card {
+            background: #e8f5e8;
+            border: 1px solid #5464c2;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-header {
+            margin-bottom: 2rem;
+        }
+
+        .contact-header h1 {
+            color: #4a7c4a;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .team-section h2 {
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-member {
+            margin-bottom: 1.5rem;
+        }
+
+        .team-member h3 {
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .email-link {
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .email-link::before {
+            content: "📧";
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .email-link:hover {
+            color: #4a7c4a;
+            text-decoration: underline;
+        }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background-color: #c3e6c3;
+            margin: 2rem 0;
+        }
+    </style>
+
+    <section class="hero1">
+        <div class="hero-content1">
+            <h1>Contact Our Team</h1>
+        </div>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-card">
+
+            <div class="team-section">
+                <h2>Project Supervisors</h2>
+
+                <div class="team-member">
+                    <h3>Dr.Olaitan Awe</h3>
+                    <a href="mailto:laitanawe@gmail.com" class="email-link">
+                        laitanawe
+                    </a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="team-section">
+                <h2>Developers</h2>
+                <div class="team-member">
+                    <h3>Gabriel Anyaele</h3>
+                    <a href="mailto:gabrielanyaele21@gmail.com" class="email-link">
+                        gabrielanyaele21@gmail.com
+                    </a>
+                </div>
+                <div class="team-member">
+                    <h3>Eugene Lamptey</h3>
+                    <a href="mailto:lampteyeugene8@gmail.com" class="email-link">
+                        lampteyeugene8@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

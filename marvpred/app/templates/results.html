@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Results - MarburgPred{% endblock %}
+
+{% block content %}
+<section class="hero1">
+    <div class="hero-content1">
+        <h1>Prediction Results</h1>
+    </div>
+    
+    <div class="card">
+        <h3>Prediction Results</h3>
+        <table class="results-table">
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Submitted SMILES</td>
+                <td><code>{{ smiles }}</code></td>
+            </tr>
+            <tr>
+                <td>Selected Model</td>
+                <td>{{ model }}</td>
+            </tr>
+            <tr>
+                <td>Prediction</td>
+                <td>{{ prediction }}</td>
+            </tr>
+            <tr>
+                <td>Confidence</td>
+                <td>{{ confidence }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <a href="{{ url_for('predict') }}" class="btn">Try Another Compound</a>
+{% endblock %}

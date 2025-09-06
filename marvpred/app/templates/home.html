@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Home - MarburgPred{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MARVpred</h1>
+            <p>Your partner in the fight against Marburg virus. Predict chemical compound inhibition with cutting-edge machine learning.</p>
+            <a href="{{ url_for('predict') }}" class="btn btn-primary">Start Predicting</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h2>About Marburg Virus</h2>
+            <p>Marburg virus is a severe hemorrhagic fever virus with a high fatality rate. Our mission is to accelerate the discovery of potential treatments.</p>
+        </div>
+        <div class="feature-card">
+            <h2>How It Works</h2>
+            <p>Leveraging advanced machine learning, MARVpred analyzes chemical structures (SMILES) to predict their potential to inhibit virus replication.</p>
+        </div>
+        <div class="feature-card">
+            <h2>Get Started</h2>
+            <p>Ready to make a difference? Click the button above to start predicting and contribute to the fight against Marburg virus.</p>
+        </div>
+    </section>
+{% endblock %}
